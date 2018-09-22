@@ -1,0 +1,17 @@
+{
+  "name": "beatsabereditortools",
+  "version": "1.0.0",
+  "description": "various tools to assist with bulk editing for beat saber",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^12.1.2"
+  }
+}

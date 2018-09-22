@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+
+		<title>Editor Tools</title>
+		<style type="text/css">
+			html {
+			        overflow: auto;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="container">
+			<button id="folderButton" onclick="selectDirectory()">Choose Song Folder</button>
+			<select id="diffSel" disabled></select>
+			<label id = "workingSong">No Song Selected</label>
+		</div>
+		<div>
+			<label>All "Start" and "End" markers are used in the following manner.<br>
+			Start &lt;= selected &lt; End<br><br></label>
+		</div>
+		<div>
+			<label>Copy and paste lighting events.</label>
+		</div>
+		<div class="container">
+			<button id="EventCopyPasteButton" onclick="eventCopyPaste()">Event Copy Paste</button>
+			<input type="text" id="eventCopyStart" placeholder="Start">
+			<input type="text" id="eventCopyEnd" placeholder="End">
+			<input type="text" id="eventPasteAt" placeholder="Paste At">
+		</div>
+		<div>
+			<label>Places an off block [Flash Time] beats after every flash block and coverts flash blocks to on blocks.</label>
+		</div>
+		<div class="container">
+			<button id="FlashButton" onclick="flash()">Flash to actual flash</button>
+			<input type="text" id="flashStart" placeholder="Start">
+			<input type="text" id="flashEnd" placeholder="End">
+			<input type="text" id="flashTiming" placeholder="Flash Time">
+		</div>
+
+		<div>
+			<label>Removes event blocks</label>
+		</div>
+		<div class="container">
+			<button id="removeEventsButton" onclick="eventRemove()">Mass Event Remove</button>
+			<input type="text" id="eventRemoveStart" placeholder="Start">
+			<input type="text" id="eventRemoveEnd" placeholder="End">
+		</div>
+
+		<div>
+			<label>Copy and paste note blocks</label>
+		</div>
+		<div class="container">
+			<button id="noteCopyPasteButton" onclick="noteCopyPaste()">Note Copy Paste</button>
+			<input type="text" id="noteCopyStart" placeholder="Start">
+			<input type="text" id="noteCopyEnd" placeholder="End">
+			<input type="text" id="notePasteAt" placeholder="Paste At">
+		</div>
+		<div>
+			<label>Mirror note blocks</label>
+		</div>
+		<div class="container">
+			<button id="mirrorButton" onclick="mirror()">Mirror Notes</button>
+			<input type="text" id="mirrorStart" placeholder="Start">
+			<input type="text" id="mirrorEnd" placeholder="End">
+		</div>
+		<div>
+			<label>Removes note blocks</label>
+		</div>
+		<div class="container">
+			<button id="removeNotesButton" onclick="noteRemove()">Mass Note Remove</button>
+			<input type="text" id="noteRemoveStart" placeholder="Start">
+			<input type="text" id="noteRemoveEnd" placeholder="End">
+		</div>
+		<div>
+			<label>Self explanatory</label>
+		</div>
+		<div class="container">
+			<button id="fuckButton" onclick="fuck()">random fucking lighting on each note</button>
+			<input type="text" id="fuckStart" placeholder="Start">
+			<input type="text" id="fuckEnd" placeholder="End">
+		</div>
+		<!-- <div>
+			<label>Change offset so note closest to [Note Beat] is shifted to the beat at [Offset Beat]</label>
+		</div>
+		<div class="container">
+			<button id="offsetButton" onclick="shiftOffset()">Change Offset</button>
+			<input type="text" id="noteBeat" placeholder="Note Beat">
+			<input type="text" id="offsetBeat" placeholder="Offset Beat">
+		</div> -->
+		<div>
+			<label>Checks for repeated same direction notes &lt;90degrees different from eachother </label>
+		</div>
+		<div class="container">
+			<button id="copyPasteButton" onclick="checkDirections()">Double Down Checker</button>
+			<input type="text" id="dirMinTime" placeholder="Min beats between notes">
+			<input type="text" id="dirMaxTime" placeholder="Max beats between notes">
+		</div>
+
+		<script src="renderer.js"></script>
+	</body>
+</html>
